@@ -3,17 +3,14 @@ import { nanoid } from 'nanoid';
 import style from './ContactForm.module.css';
 
 class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      number: '',
-    };
-  }
+  state = {
+    name: '',
+    number: '',
+  };
 
   handleChange = e => {
     const { name } = e.target;
-    this.setState(prevState => ({ ...prevState, [name]: e.target.value }));
+    this.setState(prevState => ({ prevState, [name]: e.target.value }));
   };
 
   onSubmit = e => {

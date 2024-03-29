@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import styles from './Container.module.css'
-class Container extends Component {
-  render() {
-    const { children } = this.props;
-    return <div className={styles.container}>{children}</div>;
-  }
-}
+import React from 'react';
+import styles from './Container.module.css';
 
-export default Container
+const Container = ({ children }) => (
+  <div className={styles.container}>{children}</div>
+);
+
+export default Container;
